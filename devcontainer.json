@@ -1,0 +1,38 @@
+{
+  "name": "ISDN3000E ROS2 Humble",
+  "dockerComposeFile": [
+    "./docker/docker-compose.yml"
+  ],
+  "service": "ros",
+  "runServices": [
+    "ros",
+    "novnc"
+  ],
+  "workspaceFolder": "/workspace",
+  "shutdownAction": "stopCompose",
+  "forwardPorts": [
+    8080
+  ],
+  "portsAttributes": {
+    "8080": {
+      "label": "noVNC GUI",
+      "onAutoForward": "notify"
+    }
+  },
+  "postCreateCommand": "bash -lc 'source /opt/ros/humble/setup.bash && ros2 --help >/dev/null'",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-iot.vscode-ros",
+        "ms-python.mypy-type-checker",
+        "ms-python.pylint",
+        "ms-python.python",
+        "xaver.clang-format",
+        "ms-vscode.cmake-tools",
+        "ms-vscode.cpptools",
+        "twxs.cmake"
+      ]
+    }
+  },
+  "remoteUser": "developer"
+}
