@@ -99,7 +99,7 @@ RUN existing_user=$(getent passwd ${UID} | cut -d: -f1 || true) \
     && chown -R ${UID}:${GID} /home/${USERNAME} /tmp/runtime-${USERNAME} ${WORKSPACE_DIR}
 
 RUN echo "source /opt/ros/humble/setup.bash" >> /etc/bash.bashrc \
-    && echo "export XDG_RUNTIME_DIR=/tmp/runtime-\${USER}" >> /etc/bash.bashrc
+    && echo "export XDG_RUNTIME_DIR=/tmp/runtime-${USERNAME}" >> /etc/bash.bashrc
 
 ENV DEBIAN_FRONTEND=dialog
 
