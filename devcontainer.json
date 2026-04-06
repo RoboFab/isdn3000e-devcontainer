@@ -19,7 +19,7 @@
       "onAutoForward": "notify"
     }
   },
-  "postCreateCommand": "bash -lc 'source /opt/ros/humble/setup.bash && ros2 --help >/dev/null'",
+  "postCreateCommand": "bash .devcontainer/post-create.sh",
   "customizations": {
     "vscode": {
       "extensions": [
@@ -30,8 +30,15 @@
         "xaver.clang-format",
         "ms-vscode.cmake-tools",
         "ms-vscode.cpptools",
-        "twxs.cmake"
-      ]
+        "twxs.cmake",
+        "ms-vscode.cpptools-extension-pack"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "C_Cpp.default.intelliSenseMode": "linux-gcc-x64",
+        "C_Cpp.default.compileCommands": "/workspace/build/compile_commands.json",
+        "cmake.configureOnOpen": false
+      }
     }
   },
   "remoteUser": "developer"

@@ -20,7 +20,7 @@ services:
     environment:
       - DISPLAY=novnc:0.0
       - XDG_RUNTIME_DIR=/tmp/runtime-${DEVCONTAINER_USERNAME}
-      - ROS_DOMAIN_ID=0
+      - ROS_DOMAIN_ID=42
     networks:
       - x11
     depends_on:

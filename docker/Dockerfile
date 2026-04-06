@@ -60,6 +60,26 @@ RUN apt-get update \
     python3-rosdep \
     python3-vcstool \
     python3-transforms3d \
+    ros-humble-moveit \
+    ros-humble-ros2-control \
+    ros-humble-ros2-controllers \
+    ros-humble-xacro \
+    ros-humble-joint-state-publisher \
+    ros-humble-joint-state-publisher-gui \
+    ros-humble-robot-state-publisher \
+    ros-humble-tf2-ros \
+    ros-humble-tf2-geometry-msgs \
+    ros-humble-ament-cmake-gtest \
+    ros-humble-launch-testing \
+    ros-humble-launch-testing-ament-cmake \
+    ros-humble-moveit-ros-visualization \
+    ros-humble-moveit-ros-move-group \
+    ros-humble-moveit-planners-ompl \
+    ros-humble-moveit-kinematics \
+    ros-humble-moveit-simple-controller-manager \
+    mesa-utils \
+    x11-apps \
+    wget \
     && rm -rf /var/lib/apt/lists/*
 
 RUN rosdep init \
