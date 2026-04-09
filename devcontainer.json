@@ -27,6 +27,7 @@
         "ms-python.mypy-type-checker",
         "ms-python.pylint",
         "ms-python.python",
+        "llvm-vs-code-extensions.vscode-clangd",
         "xaver.clang-format",
         "ms-vscode.cmake-tools",
         "ms-vscode.cpptools",

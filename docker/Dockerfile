@@ -34,6 +34,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     python3-pip \
     python3-tk \
     clang \
+    clangd \
     clang-format \
     clang-tidy \
     && locale-gen en_US en_US.UTF-8 \
