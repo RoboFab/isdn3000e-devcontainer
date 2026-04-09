@@ -77,6 +77,8 @@ RUN apt-get update \
     ros-humble-moveit-planners-ompl \
     ros-humble-moveit-kinematics \
     ros-humble-moveit-simple-controller-manager \
+    ros-humble-moveit-visual-tools \
+    ros-humble-moveit-resources-panda-moveit-config \
     mesa-utils \
     x11-apps \
     wget \

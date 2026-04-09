@@ -17,4 +17,5 @@ else
 fi
 
 sudo rosdep install --from-paths src --ignore-src --rosdistro humble -r -y
-colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+
+colcon build --base-paths src --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
