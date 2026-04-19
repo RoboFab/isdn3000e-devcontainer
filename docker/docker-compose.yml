@@ -10,7 +10,7 @@ services:
         UID: ${DEVCONTAINER_UID}
         GID: ${DEVCONTAINER_GID}
         UBUNTU_VERSION: ${UBUNTU_VERSION}
-    container_name: isdn3000e_ros_devcontainer
+    container_name: isdn3000e_final_project_ros
     command: sleep infinity
     shm_size: 512m
     tty: true
@@ -28,7 +28,7 @@ services:
 
   novnc:
     image: theasp/novnc:latest
-    container_name: isdn3000e_novnc
+    container_name: isdn3000e_final_project_novnc
     environment:
       - DISPLAY_WIDTH=1600
       - DISPLAY_HEIGHT=900

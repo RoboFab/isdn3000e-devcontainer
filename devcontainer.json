@@ -1,5 +1,5 @@
 {
-  "name": "ISDN3000E ROS2 Humble",
+  "name": "ISDN3000E Final Project",
   "dockerComposeFile": [
     "./docker/docker-compose.yml"
   ],
