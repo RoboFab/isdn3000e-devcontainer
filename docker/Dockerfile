@@ -52,9 +52,16 @@ RUN apt-get update \
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
     ros-humble-desktop \
+    ros-humble-rmw-zenoh-cpp \
     ros-humble-rqt \
     ros-humble-rqt-common-plugins \
+    ros-humble-rqt-image-view \
     ros-humble-rviz2 \
+    ros-humble-cv-bridge \
+    ros-humble-image-transport \
+    ros-humble-image-transport-plugins \
+    ros-humble-realsense2-camera \
+    ros-humble-realsense2-camera-msgs \
     ros-humble-tf2-tools \
     ros-humble-imu-filter-madgwick \
     python3-colcon-common-extensions \

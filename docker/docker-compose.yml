@@ -12,11 +12,26 @@ services:
         UBUNTU_VERSION: ${UBUNTU_VERSION}
     container_name: isdn3000e_ros_devcontainer
     command: sleep infinity
+    privileged: true
     shm_size: 512m
     tty: true
     stdin_open: true
     volumes:
       - ../..:/workspace:cached
+      - /dev/bus/usb:/dev/bus/usb
+      - /run/udev:/run/udev:ro
+    devices:
+      - /dev/video0:/dev/video0
+      - /dev/video1:/dev/video1
+      - /dev/video2:/dev/video2
+      - /dev/video3:/dev/video3
+      - /dev/video4:/dev/video4
+      - /dev/video5:/dev/video5
+      - /dev/media0:/dev/media0
+      - /dev/media1:/dev/media1
+    device_cgroup_rules:
+      - 'c 81:* rmw'
+      - 'c 189:* rmw'
     environment:
       - DISPLAY=novnc:0.0
       - XDG_RUNTIME_DIR=/tmp/runtime-${DEVCONTAINER_USERNAME}
