@@ -77,6 +77,9 @@ RUN apt-get update \
     ros-humble-moveit-planners-ompl \
     ros-humble-moveit-kinematics \
     ros-humble-moveit-simple-controller-manager \
+    ros-humble-gazebo-ros-pkgs \
+    ros-humble-gazebo-plugins \
+    ros-humble-gazebo-ros2-control \
     mesa-utils \
     x11-apps \
     wget \
