@@ -11,12 +11,17 @@
   "workspaceFolder": "/workspace",
   "shutdownAction": "stopCompose",
   "forwardPorts": [
-    8080
+    8080,
+    7447
   ],
   "portsAttributes": {
     "8080": {
       "label": "noVNC GUI",
       "onAutoForward": "notify"
+    },
+    "7447": {
+      "label": "Zenoh Router",
+      "onAutoForward": "silent"
     }
   },
   "postCreateCommand": "bash .devcontainer/post-create.sh",

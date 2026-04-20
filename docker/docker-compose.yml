@@ -36,6 +36,8 @@ services:
       - DISPLAY=novnc:0.0
       - XDG_RUNTIME_DIR=/tmp/runtime-${DEVCONTAINER_USERNAME}
       - ROS_DOMAIN_ID=42
+    ports:
+      - "7447:7447"
     networks:
       - x11
     depends_on:
