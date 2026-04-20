@@ -18,17 +18,9 @@ services:
     stdin_open: true
     volumes:
       - ../..:/workspace:cached
+      - /dev:/dev
       - /dev/bus/usb:/dev/bus/usb
       - /run/udev:/run/udev:ro
-    devices:
-      - /dev/video0:/dev/video0
-      - /dev/video1:/dev/video1
-      - /dev/video2:/dev/video2
-      - /dev/video3:/dev/video3
-      - /dev/video4:/dev/video4
-      - /dev/video5:/dev/video5
-      - /dev/media0:/dev/media0
-      - /dev/media1:/dev/media1
     device_cgroup_rules:
       - 'c 81:* rmw'
       - 'c 189:* rmw'
@@ -36,6 +28,7 @@ services:
       - DISPLAY=novnc:0.0
       - XDG_RUNTIME_DIR=/tmp/runtime-${DEVCONTAINER_USERNAME}
       - ROS_DOMAIN_ID=42
+      - RMW_IMPLEMENTATION=rmw_zenoh_cpp
     ports:
       - "7447:7447"
     networks:
