@@ -11,10 +11,15 @@
   "workspaceFolder": "/workspace",
   "shutdownAction": "stopCompose",
   "forwardPorts": [
-    8080
+    8080,
+    6080
   ],
   "portsAttributes": {
     "8080": {
+      "label": "viser GUI",
+      "onAutoForward": "notify"
+    },
+    "6080": {
       "label": "noVNC GUI",
       "onAutoForward": "notify"
     }
