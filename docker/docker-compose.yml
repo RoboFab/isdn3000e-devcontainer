@@ -1,15 +1,6 @@
 services:
   ros:
-    build:
-      context: ..
-      dockerfile: docker/Dockerfile
-      target: base
-      args:
-        WORKSPACE_DIR: ${WORKSPACE_DIR}
-        USERNAME: ${DEVCONTAINER_USERNAME}
-        UID: ${DEVCONTAINER_UID}
-        GID: ${DEVCONTAINER_GID}
-        UBUNTU_VERSION: ${UBUNTU_VERSION}
+    image: ${DEVCONTAINER_IMAGE}
     container_name: isdn3000e_ros_devcontainer
     command: sleep infinity
     privileged: true
